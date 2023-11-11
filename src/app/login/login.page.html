@@ -1,0 +1,40 @@
+<ion-router-outlet id="main-content"></ion-router-outlet>
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title><ion-img src="assets/logo.png" alt="Logo de EmPoderTIC" ></ion-img></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+    <ion-card class="login-card">
+      <ion-card-content class="login-content">
+        <div class="contenedor-login">
+          <div class="contenedor-form">
+            <h1 class="titulo">¡Bienvenido a EmPoderTIC</h1>
+            <p class="description">Donde tu Reconocimiento Comienza</p>
+  
+            <ion-item lines="full" class="rounded-input">
+              <ion-label position="floating">Correo Electrónico</ion-label>
+              <ion-input type="text" #email required name="correo"></ion-input>
+            </ion-item>
+  
+            <ion-item lines="full" class="rounded-input">
+              <ion-label position="floating">Contraseña</ion-label>
+              <ion-input type="password" #password required name="password"></ion-input>
+            </ion-item>
+  
+            <ion-row >
+              <ion-col>
+                <ion-button type="submit" expand="block">Iniciar Sesión</ion-button>
+              </ion-col>
+            </ion-row>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+</ion-content>

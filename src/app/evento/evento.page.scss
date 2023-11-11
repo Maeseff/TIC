@@ -70,6 +70,7 @@ ion-content {
 
   .rounded-card {
     border-radius: 15px;
+    background-color: white;
   }
   
 .ion-color-inscribirme {
@@ -79,4 +80,8 @@ ion-content {
 .imagen{
   width: 75%;
   margin-left: 8%;
+}
+
+.rounded-button {
+  border-radius: 20px; /* Ajusta según tus preferencias */
 }
