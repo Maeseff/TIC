@@ -93,11 +93,6 @@ body{
     margin-bottom: 10px;
   }
   
-  section {
-    padding: 20px;
-    text-align: center;
-  }
-  
   .footer {
     background: radial-gradient(circle at 0% 0%, #11468d, #8d2ba8, #500096, #6d39c2);
     color: #fff;
@@ -154,6 +149,7 @@ ion-content {
   --ion-background-color: transparent; /* Fondo transparente */
   font-family: Arial, sans-serif;
   padding: 0;
+  background-color: white;
 }
 
 /* Estilo del encabezado y menú */
@@ -223,4 +219,34 @@ p {
   color: white;
   border-radius: 50%;
   padding: 10px;
+}
+
+.ion-card-background {
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+
+.title-text {
+  color: white;
+}
+
+.description-text {
+  color: white;
+}
+
+.custom-icon {
+  font-size: 2em; /* Puedes ajustar el tamaño según tus necesidades */
+  color: white; /* Ajusta el color del ícono para asegurar la visibilidad */
+  border-radius: 50%; /* Asegura que el fondo degradado se aplique alrededor del ícono */
+  padding: 15px; /* Ajusta el relleno según sea necesario */
+}
+
+.large-icon {
+  font-size: 3em; /* Puedes ajustar el tamaño según tus necesidades */
+}
+
+.rounded-card {
+  border-radius: 40px; /* Puedes ajustar el radio según tus necesidades */
+  background: radial-gradient(circle at 0% 0%, #11468d, #8d2ba8, #500096, #6d39c2);
 }

@@ -11,12 +11,12 @@ export class BienvenidaPage {
     {
       icon: 'medal-outline',
       title: 'Insignias',
-      description: 'Descubre nuestras insignias.',
+      description: 'Descubre nuestras insignias de reconocimiento.',
     },
     {
       icon: 'receipt-outline',
       title: 'Certificados',
-      description: 'Colecciona insignias.',
+      description: 'Colecciona insignias y obtén un certificado.',
     },
     {
       icon: 'logo-linkedin',
@@ -26,17 +26,17 @@ export class BienvenidaPage {
     {
       icon: 'calendar',
       title: 'Actividades',
-      description: 'Inscríbete en los eventos.',
+      description: 'Inscribete a los eventos del programa Más Mujeres en las TICs.',
     },
     {
       icon: 'download',
       title: 'CV',
-      description: 'Descarga tu Certificado.',
+      description: 'Descarga tú Certificado para tu Curriculum.',
     },
     {
       icon: 'book',
       title: 'Historial de eventos',
-      description: 'Mira eventos pasados.',
+      description: 'Mira eventos pasados en nuestro registro de historial.',
     },
   ];
 
