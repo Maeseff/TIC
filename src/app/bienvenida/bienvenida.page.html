@@ -39,20 +39,18 @@
   </section>
   <ion-fab slot="fixed" vertical="bottom" horizontal="end">
     <ion-fab-button>
-      <ion-icon name="chevron-up-circle"></ion-icon>
+      <ion-icon name="add" class="fabi"></ion-icon>
     </ion-fab-button>
     <ion-fab-list side="top">
-      <ion-fab-button>
-        <ion-icon name="document"></ion-icon>
+      <ion-fab-button (click)="evento()">
+        <ion-icon name="calendar" class="fabi"></ion-icon>
       </ion-fab-button>
-      <ion-fab-button>
-        <ion-icon name="color-palette"></ion-icon>
-      </ion-fab-button>
-      <ion-fab-button>
-        <ion-icon name="globe"></ion-icon>
+      <ion-fab-button (click)="programa()">
+        <ion-icon name="woman" class="fabi"></ion-icon>
       </ion-fab-button>
     </ion-fab-list>
   </ion-fab>
+  
   <ion-footer class="footer">
     <ion-toolbar>
       <div class="footer-line"></div>

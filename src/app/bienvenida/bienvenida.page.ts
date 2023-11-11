@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-services',
@@ -39,5 +40,13 @@ export class BienvenidaPage {
     },
   ];
 
-  constructor() {}
+  constructor(private router: Router) {}
+
+  evento(){
+    this.router.navigate(['eventos']);
+  }
+
+  programa(){
+    this.router.navigate(['programa']);
+  }
 }

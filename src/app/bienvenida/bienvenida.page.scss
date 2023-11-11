@@ -205,8 +205,8 @@ section {
   top: 0;
   left: 0;
   background: radial-gradient(circle at 0% 0%, #11468d, #8d2ba8, #500096, #6d39c2);
-  z-index: -1; /* Asegura que el fondo degradado esté detrás del icono */
-  border-radius: 50%; /* Asegura que el fondo tenga una forma circular */
+  z-index: -1;
+  border-radius: 50%;
 }
 
 p {
@@ -216,4 +216,11 @@ p {
 .imagen{
   width: 75%;
   margin-left: 8%;
+}
+
+.fabi {
+  background: radial-gradient(circle at 0% 0%, #11468d, #8d2ba8, #500096, #6d39c2);
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
 }
