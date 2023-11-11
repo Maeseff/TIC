@@ -18,4 +18,8 @@ export class PoderticService {
   getInsignias() {
     return this.http.get("http://localhost:1337/insignias")
   }
+
+  getEventos(){
+    return this.http.get("http://localhost:1337/eventos")
+  }
 }

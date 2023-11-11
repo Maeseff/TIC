@@ -1,13 +1,65 @@
+<ion-router-outlet id="main-content"></ion-router-outlet>
+
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>programa</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title><ion-img src="assets/logo.png" alt="Logo de EmPoderTIC" ></ion-img></ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+    <ion-grid class="ion-padding">
+      <!-- Sección de descripción del programa -->
+      <ion-row>
+        <ion-col size="12" class="ion-text-center">
+          <h1>Programa Más Mujeres en las TICs</h1>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12" size-md="6">
+          <ion-card class="program-description-box">
+            <ion-card-header>
+              <ion-card-title>¿Qué es Más Mujeres en las TICs?</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              "Más Mujeres en las TICs" es un programa de la Escuela de Informática y Telecomunicaciones de Duoc UC que empodera a las mujeres en la industria de las TIC. Ofrecemos habilidades de vanguardia, mentores excepcionales y acceso a eventos exclusivos con líderes de la industria. Únete a esta comunidad global de mujeres en las TIC y sé parte de la próxima generación de líderes tecnológicas. ¡Únete a la transformación!
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="12" size-md="6">
+          <ion-card class="program-description-box">
+            <ion-card-header>
+              <ion-card-title>¿De dónde somos?</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              "Más Mujeres en las TICs" encuentra su origen en la Escuela de Informática y Telecomunicaciones de Duoc UC, pero su verdadero hogar está en la diversidad y la inclusión de mujeres apasionadas por la tecnología que se unen para cambiar el panorama de las TIC. Es un lugar donde nuestras diferencias enriquecen nuestra fortaleza colectiva y nos permiten avanzar hacia un futuro más inclusivo y equitativo en la industria tecnológica. Este es el lugar "de donde somos," un lugar de unidad y empoderamiento.
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+
+  <ion-footer class="footer">
     <ion-toolbar>
-      <ion-title size="large">programa</ion-title>
+      <div class="footer-line"></div>
+      <img class="footer-logo" src="assets/logo.png" alt="Logo" />
+      <div class="footer-line"></div>
+      <div class="footer-icons">
+        <a href="https://www.linkedin.com/company/duocuc/?originalSubdomain=cl" target="_blank">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+        <a href="https://www.instagram.com/masmujeresenlastics/" target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+      </div>
+      <div class="footer-copyright">
+        Derechos de Autor &copy; 2023
+        <br />
+        Programa Más Mujeres en las TICs Duoc UC
+      </div>
     </ion-toolbar>
-  </ion-header>
+</ion-footer>
 </ion-content>

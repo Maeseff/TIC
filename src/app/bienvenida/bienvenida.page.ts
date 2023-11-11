@@ -43,7 +43,7 @@ export class BienvenidaPage {
   constructor(private router: Router) {}
 
   evento(){
-    this.router.navigate(['eventos']);
+    this.router.navigate(['evento']);
   }
 
   programa(){

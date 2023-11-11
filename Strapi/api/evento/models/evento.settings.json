@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "eventos",
+  "info": {
+    "name": "evento"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "text"
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "tipo_evento": {
+      "type": "enumeration",
+      "enum": [
+        "Taller",
+        "Curso"
+      ]
+    },
+    "fecha_evento": {
+      "type": "date"
+    },
+    "hora_evento": {
+      "type": "time"
+    },
+    "lugar_evento": {
+      "type": "text"
+    }
+  }
+}
