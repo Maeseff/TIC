@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "insignias",
+  "info": {
+    "name": "insignia",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "objetivo": {
+      "type": "text"
+    },
+    "imagen_url": {
+      "type": "text"
+    }
+  }
+}

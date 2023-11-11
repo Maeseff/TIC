@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tipo_perfils",
+  "info": {
+    "name": "tipo_perfil"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre_tipo_perfil": {
+      "type": "text"
+    },
+    "dominio_correo": {
+      "type": "text"
+    }
+  }
+}

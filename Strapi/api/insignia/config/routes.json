@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/insignias",
+      "handler": "insignia.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/insignias/count",
+      "handler": "insignia.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/insignias/:id",
+      "handler": "insignia.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/insignias",
+      "handler": "insignia.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/insignias/:id",
+      "handler": "insignia.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/insignias/:id",
+      "handler": "insignia.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

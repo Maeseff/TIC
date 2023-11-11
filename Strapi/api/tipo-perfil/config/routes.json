@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/tipo-perfils",
+      "handler": "tipo-perfil.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tipo-perfils/count",
+      "handler": "tipo-perfil.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tipo-perfils/:id",
+      "handler": "tipo-perfil.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/tipo-perfils",
+      "handler": "tipo-perfil.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/tipo-perfils/:id",
+      "handler": "tipo-perfil.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/tipo-perfils/:id",
+      "handler": "tipo-perfil.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
