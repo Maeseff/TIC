@@ -1,0 +1,219 @@
+body{
+    background: #f7f9fd;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: radial-gradient(circle at 0% 0%, #11468d, #8d2ba8, #500096, #6d39c2);
+    padding: 10px;
+    position: relative;
+    z-index: 999; /* Para que el menú esté por encima del contenido */
+  }
+  
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .menu-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .menu-list li:hover {
+    color: #3770B8; /* Cambia el color de texto al pasar el cursor */
+  } 
+  .menu-list li {
+    font-size: 16px;
+    transition: color 0.3s ease; /* Agrega una transición suave para el color de texto */
+  }
+  
+  /* Botón de Iniciar Sesión */
+  .btn-iniciar-sesion {
+    background: #3770B8;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease; /* Agrega transiciones para fondo y transformación */
+    padding: 8px 16px; /* Adjust padding for button size */
+    font-size: 16px; /* Adjust font size for responsiveness */
+    margin-top: 0; /* Reset top margin */
+  }
+  
+  .btn-iniciar-sesion:hover {
+    background: #3285dd; /* Cambia el fondo al pasar el cursor */
+    transform: scale(1.1); /* Escala el botón al 110% de su tamaño original */
+  }
+  
+  /* Estilo del banner */
+  .banner img {
+    width: 100%;
+    height: auto;
+    display:block;
+  }
+  
+  /* Estilo de la sección de bienvenida */
+  .welcome {
+    background: radial-gradient(circle at 0% 0%, #11468d, #8d2ba8, #500096, #6d39c2);
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .welcome h1, .welcome h2 {
+    color: white;
+  }
+  
+  .services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  .service-item {
+    width: 30%;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .service-icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  section {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer {
+    background: radial-gradient(circle at 0% 0%, #11468d, #8d2ba8, #500096, #6d39c2);
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  .footer-icons a:hover .fab.fa-linkedin,
+  .footer-icons a:hover .fab.fa-instagram {
+      background: radial-gradient(circle at 0% 0%, #11468d, #8d2ba8, #500096, #6d39c2);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+  }
+  
+  .footer-line {
+    width: 10%; /* Longitud de las líneas */
+    border-top: 1px solid #fff; /* Línea horizontal */
+    display: inline-block;
+    margin: 10px 0; /* Espacio entre las líneas y el logo */
+    margin-bottom: 35px;
+    margin-right: 12px;
+  }
+  
+  .footer-copyright {
+    margin-top: 10px; /* Espacio entre los íconos y el texto de derechos de autor */
+    text-align: center;
+  }
+  
+  .footer-logo {
+    max-width: 1500px; /* Tamaño máximo del logo */
+  }
+  
+  .footer-icons {
+    margin-top: 10px; /* Espacio entre el logo y los iconos */
+    margin-left: 140px;
+  }
+  
+  .footer-icons a {
+    display: inline-block;
+    margin: 0 10px; /* Espacio entre los iconos */
+    color: #fff; /* Color del ícono */
+    font-size: 24px; /* Tamaño del ícono */
+  }
+
+  .medal {
+    background: radial-gradient(circle at 0% 0%, #11468d, #8d2ba8, #500096, #6d39c2);
+    -webkit-background-clip: text; /* Propiedad específica de WebKit para aplicar el gradiente al texto */
+    background-clip: text;
+    color: transparent; /* Hace que el color del texto sea transparente */
+  }
+
+/* Estilo global */
+ion-content {
+  --ion-background-color: transparent; /* Fondo transparente */
+  font-family: Arial, sans-serif;
+  padding: 0;
+}
+
+/* Estilo del encabezado y menú */
+ion-toolbar {
+  --background: radial-gradient(circle at 0% 0%, #11468d, #8d2ba8, #500096, #6d39c2);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  --ion-color-base: white; /* Color del texto */
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.service-item {
+  width: 30%;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.service-icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+section {
+  padding: 20px;
+  text-align: center;
+}
+
+.custom-icon-linkedin {
+  background: radial-gradient(circle at 0% 0%, #11468d, #8d2ba8, #500096, #6d39c2);
+}
+
+/* Estilo para el fondo degradado radial */
+.icon-background::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle at 0% 0%, #11468d, #8d2ba8, #500096, #6d39c2);
+  z-index: -1; /* Asegura que el fondo degradado esté detrás del icono */
+  border-radius: 50%; /* Asegura que el fondo tenga una forma circular */
+}
+
+p {
+  color: white;
+}
+
+.imagen{
+  width: 75%;
+  margin-left: 8%;
+}

@@ -1,0 +1,77 @@
+<ion-router-outlet id="main-content"></ion-router-outlet>
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+      <ion-img class="imagen" src="assets/logo.png" alt="Logo de EmPoderTIC"></ion-img> 
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true" class="auth-form">
+  <div class="banner">
+    <img src="assets/banner.png" alt="Banner de EmPoderTIC" />
+  </div>
+  <section class="welcome">
+    <ion-card-content>
+      <h1>Bienvenidos a EmPoderTIC</h1>
+      <h2>¡Construyendo un futuro equitativo en las TIC!</h2>
+      <br />
+      <ion-button expand="full" [routerLink]="['/login']">Iniciar Sesion</ion-button>
+    </ion-card-content>
+  </section>
+
+  <!-- Sección de "Servicios" -->
+  <section class="services">
+    <ion-card-header>
+      <ion-card-title>Servicios</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let service of services">
+          <ion-icon [name]="service.icon" slot="start" class="icon-background"></ion-icon>
+          <ion-label>
+            <h2>{{ service.title }}</h2>
+            <p>{{ service.description }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </section>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="chevron-up-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button>
+        <ion-icon name="document"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="color-palette"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="globe"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  <ion-footer class="footer">
+    <ion-toolbar>
+      <div class="footer-line"></div>
+      <img class="footer-logo" src="assets/logo.png" alt="Logo" />
+      <div class="footer-line"></div>
+      <div class="footer-icons">
+        <a href="https://www.linkedin.com/company/duocuc/?originalSubdomain=cl" target="_blank">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+        <a href="https://www.instagram.com/masmujeresenlastics/" target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+      </div>
+      <div class="footer-copyright">
+        Derechos de Autor &copy; 2023
+        <br />
+        Programa Más Mujeres en las TICs Duoc UC
+      </div>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>
+
