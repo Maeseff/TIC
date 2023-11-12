@@ -41,10 +41,6 @@ const routes: Routes = [
     loadChildren: () => import('./perfil-estudiante/perfil-estudiante.module').then( m => m.PerfilEstudiantePageModule)
   },
   {
-    path: 'registro',
-    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
-  },
-  {
     path: 'perfil-docente',
     loadChildren: () => import('./perfil-docente/perfil-docente.module').then( m => m.PerfilDocentePageModule)
   },
