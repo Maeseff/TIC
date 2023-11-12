@@ -20,6 +20,11 @@
     "insignias": {
       "via": "tipo_perfil_tipo_perfil_id",
       "collection": "insignia"
+    },
+    "user": {
+      "via": "tipo_perfil",
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }

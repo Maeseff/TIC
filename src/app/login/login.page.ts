@@ -1,13 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { PoderticService } from '../poder/podertic.service';
-import { AlertController, NavController } from '@ionic/angular';
-import {
-  FormGroup,
-  FormControl,
-  Validators,
-  FormBuilder
-} from '@angular/forms'
+import { AlertController } from '@ionic/angular';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -16,45 +11,42 @@ import {
 })
 export class LoginPage implements OnInit {
 
-  formularioLogin: FormGroup;
+  correo: string = '';
+  password: string = '';
 
   constructor(
     public poderticService: PoderticService,
     public router: Router,
-    public fb: FormBuilder,
     public alertController: AlertController,
-    public navCtrl: NavController
-  ) {
-    this.formularioLogin = this.fb.group({
-      'correo': new FormControl("",Validators.required),
-      'password': new FormControl("",Validators.required)
-    })
-  }
-  ngOnInit() {
-
-  }
-
-  async iniciar(){
-    var f = this.formularioLogin.value;
-
-    var usuarioString = localStorage.getItem('usuario');
-
-    if (usuarioString) {
-      var usuario = JSON.parse(usuarioString);
-
-    if(usuario.correo == f.correo && usuario.password == f.password){
-      console.log('ingresado');
-      localStorage.setItem('ingresado', 'true');
-      this.navCtrl.navigateRoot('perfil-estudiante', { state: { userData: JSON.stringify(usuario) } });
-    }else{
-        const alert = await this.alertController.create({
-          header: 'Datos incompletos',
-          message: 'Los datos ingresados no son correctos',
-          buttons: ['Aceptar']
-        });
+    private authService: AuthService,
+  ) { }
   
-        await alert.present();
-    }
+  ngOnInit() {}
+
+  iniciarSesion() {
+    this.poderticService.login(this.correo, this.password).subscribe(
+      (data) => {
+        console.log('Respuesta del inicio de sesión:', data);
+
+        // Guarda el token en el servicio de autenticación
+        this.authService.setToken(data.jwt);
+
+        // Directly navigate to the desired route (e.g., '/user')
+        this.router.navigate(['/perfil-estudiante']);
+      },
+      (error) => {
+        console.error('Error al iniciar sesión', error);
+        // Muestra un mensaje de error al usuario
+        this.mostrarMensajeError('Datos incorrectos. Por favor, verifique su correo y contraseña.');
+      }
+    );
   }
+
+  mostrarMensajeError(mensaje: string) {
+    this.alertController.create({
+      header: 'Error de inicio de sesión',
+      message: mensaje,
+      buttons: ['Aceptar']
+    }).then(alert => alert.present());
   }
 }
