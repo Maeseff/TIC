@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "usuarios",
+  "info": {
+    "name": "usuarios"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "text"
+    },
+    "apellido_paterno": {
+      "type": "text"
+    },
+    "apellido_materno": {
+      "type": "text"
+    },
+    "correo_electronico": {
+      "type": "text"
+    },
+    "contrasena": {
+      "type": "password"
+    },
+    "rut": {
+      "type": "string"
+    },
+    "tipo_perfil_tipo_perfil_id": {
+      "model": "evento",
+      "via": "usuario"
+    },
+    "asistencias": {
+      "via": "usuario",
+      "collection": "asistencia"
+    },
+    "otorgar_insignias_p_2": {
+      "via": "usuario",
+      "model": "otorgar-insignias-p2"
+    }
+  }
+}

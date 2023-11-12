@@ -1,0 +1,19 @@
+.ion-card-tittle{
+    color: #3979C0;
+    font-size: 92%;
+}
+
+
+.ion-card-col{
+    color: #3266A5;
+}
+
+/* Estilo del encabezado y menú */
+ion-toolbar {
+    --background: radial-gradient(circle at 0% 0%, #11468d, #8d2ba8, #500096, #6d39c2);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    --ion-color-base: white; /* Color del texto */
+  }

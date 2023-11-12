@@ -23,6 +23,10 @@
     },
     "imagen_url": {
       "type": "text"
+    },
+    "tipo_perfil_tipo_perfil_id": {
+      "model": "tipo-perfil",
+      "via": "insignias"
     }
   }
 }

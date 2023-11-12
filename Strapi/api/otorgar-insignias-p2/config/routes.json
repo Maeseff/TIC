@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/otorgar-insignias-p-2-s",
+      "handler": "otorgar-insignias-p2.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/otorgar-insignias-p-2-s/count",
+      "handler": "otorgar-insignias-p2.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/otorgar-insignias-p-2-s/:id",
+      "handler": "otorgar-insignias-p2.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/otorgar-insignias-p-2-s",
+      "handler": "otorgar-insignias-p2.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/otorgar-insignias-p-2-s/:id",
+      "handler": "otorgar-insignias-p2.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/otorgar-insignias-p-2-s/:id",
+      "handler": "otorgar-insignias-p2.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

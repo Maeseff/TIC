@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "asistencias",
+  "info": {
+    "name": "asistencia"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "registro_asistencia_evento": {
+      "type": "boolean"
+    },
+    "fecha_registro_asistencia": {
+      "type": "date"
+    },
+    "usuario": {
+      "model": "usuarios",
+      "via": "asistencias"
+    },
+    "evento": {
+      "model": "evento",
+      "via": "asistencias"
+    }
+  }
+}

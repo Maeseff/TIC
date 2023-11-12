@@ -12,10 +12,14 @@
   "pluginOptions": {},
   "attributes": {
     "nombre_tipo_perfil": {
-      "type": "text"
+      "type": "string"
     },
     "dominio_correo": {
-      "type": "text"
+      "type": "string"
+    },
+    "insignias": {
+      "via": "tipo_perfil_tipo_perfil_id",
+      "collection": "insignia"
     }
   }
 }

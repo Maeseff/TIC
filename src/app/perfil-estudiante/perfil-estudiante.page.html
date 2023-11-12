@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button name="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title> Perfil Estudiante</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card>
+      <p>{{ userData?.tipoUsuario }}</p>
+      <ion-card-header>
+        <ion-card-title>{{userData.nombre}}</ion-card-title>
+        <ion-card-subtitle>{{userData.rut}}</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        Informática y telecomunicaciones
+        Ingeniería Informática
+        <br>
+        -----------------------------
+        <br>
+        Duoc UC, San Andrés Concepción
+      </ion-card-content>
+    </ion-card>
+    <div [ngSwitch]="userData.tipoUsuario">
+      <ion-card *ngSwitchCase="'Estudiante'">
+        <!-- Contenido específico para estudiantes -->
+        <ion-card-header *ngFor="let insignia of insignias">
+          <img [src]="insignia.imagen_url" alt="Imagen Estudiante"/>
+          <ion-card-title style="text-align: center;">{{insignia.nombre}}</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-header>
+          <ion-card-title class="ion-card-tittle">Historial de Participación</ion-card-title>
+        </ion-card-header>
+        <ion-item button detail="true" detail-icon="caret-forward-outline">
+          <ion-label>
+            <h3>Taller de Liderazgo Femenino "Empoderamiento</h3>
+            <p>Jueves 24 de agosto 2023</p>
+          </ion-label>
+        </ion-item>
+        <ion-item button detail="true" detail-icon="caret-forward-outline">
+          <ion-label>
+            <h3>Taller de Liderazgo Femenino "Colaboración</h3>
+            <p>Jueves 20 de abril 2023</p>
+          </ion-label>
+        </ion-item>
+      </ion-card>
+
+      <!-- Contenido específico para Administrativo -->
+      <ion-card *ngSwitchCase="'Administrativo'">
+
+      </ion-card>
+      
+      <!-- Contenido específico para Docente Duoc UC -->
+      <ion-card *ngSwitchCase="'Docente Duoc UC'">
+        <ion-card-header>
+          <img src="ruta/imagen-estudiante.jpg" alt="Imagen Estudiante"/>
+          <ion-card-title style="text-align: center;">{{ userData.nombre }}</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-header>
+          <ion-card-title class="ion-card-tittle">Historial de Participación</ion-card-title>
+        </ion-card-header>
+        <ion-item button detail="true" detail-icon="caret-forward-outline">
+          <ion-label>
+            <h3>Taller de Liderazgo Femenino "Empoderamiento</h3>
+            <p>Jueves 24 de agosto 2023</p>
+          </ion-label>
+        </ion-item>
+        <ion-item button detail="true" detail-icon="caret-forward-outline">
+          <ion-label>
+            <h3>Taller de Liderazgo Femenino "Colaboración</h3>
+            <p>Jueves 20 de abril 2023</p>
+          </ion-label>
+        </ion-item>
+      </ion-card>
+
+    </div>
+  </ion-card>
+</ion-content>

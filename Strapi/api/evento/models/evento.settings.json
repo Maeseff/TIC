@@ -32,6 +32,18 @@
     },
     "lugar_evento": {
       "type": "text"
+    },
+    "usuario": {
+      "via": "tipo_perfil_tipo_perfil_id",
+      "model": "usuarios"
+    },
+    "asistencias": {
+      "via": "evento",
+      "collection": "asistencia"
+    },
+    "otorgar_insignias_p_2": {
+      "via": "eventos",
+      "model": "otorgar-insignias-p2"
     }
   }
 }

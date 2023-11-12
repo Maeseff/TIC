@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "otorgar_insignias_p2s",
+  "info": {
+    "name": "otorgar_insignias_p2"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "registro_insignia_evento": {
+      "type": "boolean"
+    },
+    "contribucion_evento": {
+      "type": "text"
+    },
+    "fecha_registro_otorgamiento": {
+      "type": "date"
+    },
+    "usuario": {
+      "model": "usuarios",
+      "via": "otorgar_insignias_p_2"
+    },
+    "eventos": {
+      "collection": "evento",
+      "via": "otorgar_insignias_p_2"
+    }
+  }
+}
