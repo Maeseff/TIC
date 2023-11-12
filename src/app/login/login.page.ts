@@ -31,8 +31,21 @@ export class LoginPage implements OnInit {
         // Guarda el token en el servicio de autenticación
         this.authService.setToken(data.jwt);
 
-        // Directly navigate to the desired route (e.g., '/user')
-        this.router.navigate(['/perfil-estudiante']);
+        // Check if the email domain is "profesor.duoc.cl"
+        const emailDomain = this.correo.split('@')[1];
+        if (emailDomain === 'profesor.duoc.cl') {
+          // Redirect to the teacher's profile page
+          this.router.navigate(['/perfil-docente']);
+        } else if (emailDomain === 'duocuc.cl') {
+          // Redirect to the student's profile page
+          this.router.navigate(['/perfil-estudiante']);
+        } else if (emailDomain == 'duoc.cl'){
+          this.router.navigate(['/perfil-administrativo']);
+        }
+        else {
+          // Redirect to a default page (e.g., home page)
+          this.router.navigate(['/']);
+        }
       },
       (error) => {
         console.error('Error al iniciar sesión', error);
