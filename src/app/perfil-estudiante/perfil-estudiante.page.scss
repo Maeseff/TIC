@@ -3,6 +3,18 @@
     font-size: 92%;
 }
 
+.blu{
+  background: white;
+  color: #3266A5;
+}
+
+.blu2{
+  background: #A65AA2;
+}
+
+.blu3{
+  background: #9BB7DC;
+}
 
 .ion-card-col{
     color: #3266A5;
@@ -16,4 +28,33 @@ ion-toolbar {
     justify-content: space-between;
     align-items: center;
     --ion-color-base: white; /* Color del texto */
+  }
+
+  ion-content {
+    --ion-background-color: transparent; /* Fondo transparente */
+    font-family: Arial, sans-serif;
+    padding: 0;
+    background: radial-gradient(circle at 0% 0%, #11468d, #8d2ba8, #500096, #6d39c2);
+  }
+
+  .imag{
+    margin-right: 40%;
+    width: 85%;
+  }
+
+  .cerrar{
+    width: 100%;
+    margin-left: 6%;
+    font-size: medium;
+  }
+
+  h4{
+    text-align: center;
+  }
+
+  .fabi {
+    background: radial-gradient(circle at 0% 0%, #11468d, #8d2ba8, #500096, #6d39c2);
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
   }

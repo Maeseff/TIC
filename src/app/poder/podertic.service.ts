@@ -10,7 +10,6 @@ import { Observable } from 'rxjs';
 export class PoderticService {
 
   private apiUrl = 'http://localhost:1337';
-  private tipoUsuario: string = '';
 
   constructor(
     private http: HttpClient,
@@ -33,8 +32,8 @@ export class PoderticService {
     return this.http.get("http://localhost:1337/eventos")
   }
 
-  getUsuario() {
-    return this.http.get("http://localhost:1337/users");
+  getUsuario(){
+    return this.http.get("http://localhost:1337/usuarios")
   }
 
   getTipoperfil(){

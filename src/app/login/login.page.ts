@@ -27,25 +27,12 @@ export class LoginPage implements OnInit {
     this.poderticService.login(this.correo, this.password).subscribe(
       (data) => {
         console.log('Respuesta del inicio de sesión:', data);
-
+  
         // Guarda el token en el servicio de autenticación
         this.authService.setToken(data.jwt);
-
-        // Check if the email domain is "profesor.duoc.cl"
-        const emailDomain = this.correo.split('@')[1];
-        if (emailDomain === 'profesor.duoc.cl') {
-          // Redirect to the teacher's profile page
-          this.router.navigate(['/perfil-docente']);
-        } else if (emailDomain === 'duocuc.cl') {
-          // Redirect to the student's profile page
-          this.router.navigate(['/perfil-estudiante']);
-        } else if (emailDomain == 'duoc.cl'){
-          this.router.navigate(['/perfil-administrativo']);
-        }
-        else {
-          // Redirect to a default page (e.g., home page)
-          this.router.navigate(['/']);
-        }
+  
+        // Redirige a la página correspondiente según el tipo de usuario
+        this.redirigirSegunTipoUsuario();
       },
       (error) => {
         console.error('Error al iniciar sesión', error);
@@ -54,7 +41,20 @@ export class LoginPage implements OnInit {
       }
     );
   }
-
+  
+  redirigirSegunTipoUsuario() {
+    const emailDomain = this.correo.split('@')[1];
+    if (emailDomain === 'duocuc.cl') {
+      this.router.navigate(['/perfil-estudiante'], { replaceUrl: true });
+    } else if (emailDomain === 'profesor.duoc.cl') {
+      this.router.navigate(['/perfil-docente'], { replaceUrl: true });
+    } else if (emailDomain === 'duoc.cl') {
+      this.router.navigate(['/perfil-administrativo'], { replaceUrl: true });
+    } else {
+      this.router.navigate(['/'], { replaceUrl: true });
+    }
+  }
+  
   mostrarMensajeError(mensaje: string) {
     this.alertController.create({
       header: 'Error de inicio de sesión',
@@ -62,4 +62,4 @@ export class LoginPage implements OnInit {
       buttons: ['Aceptar']
     }).then(alert => alert.present());
   }
-}
+}  

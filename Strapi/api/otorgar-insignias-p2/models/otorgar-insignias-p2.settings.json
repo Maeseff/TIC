@@ -21,8 +21,8 @@
       "type": "date"
     },
     "usuario": {
-      "model": "usuarios",
-      "via": "otorgar_insignias_p_2"
+      "via": "otorgar_insignias_p_2",
+      "model": "usuarios"
     },
     "eventos": {
       "collection": "evento",

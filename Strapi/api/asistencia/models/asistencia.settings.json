@@ -18,8 +18,8 @@
       "type": "date"
     },
     "usuario": {
-      "model": "usuarios",
-      "via": "asistencias"
+      "via": "asistencias",
+      "model": "usuarios"
     },
     "evento": {
       "model": "evento",
