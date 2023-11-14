@@ -51,7 +51,7 @@ export class LoginPage implements OnInit {
     } else if (emailDomain === 'duoc.cl') {
       this.router.navigate(['/perfil-administrativo'], { replaceUrl: true });
     } else {
-      this.router.navigate(['/'], { replaceUrl: true });
+      this.router.navigate(['/home'], { replaceUrl: true });
     }
   }
   
