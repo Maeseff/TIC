@@ -40,7 +40,13 @@ export class PerfilEstudiantePage implements OnInit {
     }, (err: any) => {
       console.log(err);
     });
-    
+
+    this.poderticService.getInsignias().subscribe(
+      (res) => {
+        this.insignias = res;
+      },
+      (err) => console.log(err)
+    )
   }
 
   evento(){

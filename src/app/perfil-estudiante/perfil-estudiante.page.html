@@ -13,7 +13,7 @@
       <ion-card class="blu">
         <h4>Estudiante y/o Titulado</h4>
         <ion-card-header>
-          <ion-card-title> Tabita Melo </ion-card-title>
+          <ion-card-title style="color: black;"> Tabita Melo </ion-card-title>
           <ion-card-subtitle> 20928183-k </ion-card-subtitle>
         </ion-card-header>
         <ion-card-content>
@@ -32,26 +32,32 @@
           <img [src]="insignia.imagen" alt="insignia">
           <ion-card-title style="text-align: center;">{{insignia.nombre}}</ion-card-title>
         </ion-card-header>
+        <ion-card-content style="color: black;">
+          Objetivo
+        </ion-card-content>
       </ion-card>
     </div>
-      <ion-card>
-
           <ion-card-header>
-            <ion-card-title class="ion-card-tittle">Historial de Participación</ion-card-title>
+            <ion-card-title class="ion-card-tittle" style="text-align: center;">Historial de Participación</ion-card-title>
           </ion-card-header>
-          <ion-item button detail="true" detail-icon="caret-forward-outline" class="blu3">
-            <ion-label>
-              <h3>Taller de Liderazgo Femenino "Empoderamiento</h3>
-              <p>Jueves 24 de agosto 2023</p>
-            </ion-label>
-          </ion-item>
-          <ion-item button detail="true" detail-icon="caret-forward-outline">
-            <ion-label>
-              <h3>Taller de Liderazgo Femenino "Colaboración</h3>
-              <p>Jueves 20 de abril 2023</p>
-            </ion-label>
-          </ion-item>
-        </ion-card>
+          <ion-card class="blu3 blu4">
+            <ion-card-subtitle style="text-align: center; margin-top: 5%;">Taller de Liderazgo Femenino "Empoderamiento</ion-card-subtitle>
+            <ion-card-content class="blu4">
+              <p style="text-align: center;">Jueves 20 de julio 2023</p>
+            </ion-card-content>
+          </ion-card>
+          <ion-card class="blu3 blu4">
+            <ion-card-subtitle style="text-align: center; margin-top: 5%;">Taller de Liderazgo Femenino "Colaboración</ion-card-subtitle>
+            <ion-card-content class="blu4">
+              <p style="text-align: center;">Jueves 20 de agosto 2023</p>
+            </ion-card-content>
+          </ion-card>
+          <ion-card class="blu3 blu4">
+            <ion-card-subtitle style="text-align: center; margin-top: 5%;">Taller de Liderazgo Femenino "Colaboración</ion-card-subtitle>
+            <ion-card-content class="blu4">
+              <p style="text-align: center;">Miercoles 20 de Septiembre 2023</p>
+            </ion-card-content>
+          </ion-card>
   </ion-card>
   <ion-fab slot="fixed" vertical="bottom" horizontal="end">
     <ion-fab-button>
