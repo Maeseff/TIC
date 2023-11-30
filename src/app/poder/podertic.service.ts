@@ -10,6 +10,8 @@ import { Observable } from 'rxjs';
 export class PoderticService {
 
   private apiUrl = 'http://localhost:1337';
+  private historialParticipacion: any[] = [];
+  private KEY_INSCRIPCIONES = 'inscripciones';
 
   constructor(
     private http: HttpClient,
@@ -42,5 +44,14 @@ export class PoderticService {
 
   getUser(){
     return this.http.get("http://localhost:1337/users")
+  }
+
+  getHistorialParticipacion() {
+    return this.historialParticipacion;
+  }
+
+  // Método para agregar un evento al historial de participación
+  agregarEventoAlHistorial(evento: any) {
+    this.historialParticipacion.push(evento);
   }
 }

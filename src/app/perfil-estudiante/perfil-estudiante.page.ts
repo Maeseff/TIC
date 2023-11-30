@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class PerfilEstudiantePage implements OnInit {
 
+  historialParticipacion: any[] = [];
   insignias: any = [];
   tipoperfil: any = [];
   usuarios: any[] = [];
@@ -27,6 +28,8 @@ export class PerfilEstudiantePage implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.historialParticipacion = this.poderticService.getHistorialParticipacion();
+
     this.poderticService.getTipoperfil().subscribe((data: any) => {
       this.tipoperfil = data.filter((tipoperfl: any) => tipoperfl.tipo_perfil === 'Estudiante y/o Titulado');
     }, (err: any) => {

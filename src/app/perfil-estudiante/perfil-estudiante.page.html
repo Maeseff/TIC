@@ -40,22 +40,10 @@
           <ion-card-header>
             <ion-card-title class="ion-card-tittle" style="text-align: center;">Historial de Participación</ion-card-title>
           </ion-card-header>
-          <ion-card class="blu3 blu4">
-            <ion-card-subtitle style="text-align: center; margin-top: 5%;">Taller de Liderazgo Femenino "Empoderamiento</ion-card-subtitle>
+          <ion-card class="blu3 blu4" *ngFor="let evento of historialParticipacion">
+            <ion-card-subtitle style="text-align: center; margin-top: 5%;">{{evento.nombre}}</ion-card-subtitle>
             <ion-card-content class="blu4">
-              <p style="text-align: center;">Jueves 20 de julio 2023</p>
-            </ion-card-content>
-          </ion-card>
-          <ion-card class="blu3 blu4">
-            <ion-card-subtitle style="text-align: center; margin-top: 5%;">Taller de Liderazgo Femenino "Colaboración</ion-card-subtitle>
-            <ion-card-content class="blu4">
-              <p style="text-align: center;">Jueves 20 de agosto 2023</p>
-            </ion-card-content>
-          </ion-card>
-          <ion-card class="blu3 blu4">
-            <ion-card-subtitle style="text-align: center; margin-top: 5%;">Taller de Liderazgo Femenino "Colaboración</ion-card-subtitle>
-            <ion-card-content class="blu4">
-              <p style="text-align: center;">Miercoles 20 de Septiembre 2023</p>
+              <p style="text-align: center;">{{evento.fecha_evento}}</p>
             </ion-card-content>
           </ion-card>
   </ion-card>

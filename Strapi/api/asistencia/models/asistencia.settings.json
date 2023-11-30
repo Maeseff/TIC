@@ -22,8 +22,8 @@
       "model": "usuarios"
     },
     "evento": {
-      "model": "evento",
-      "via": "asistencias"
+      "via": "asistencias",
+      "model": "evento"
     }
   }
 }

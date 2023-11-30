@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "eventos",
   "info": {
-    "name": "evento"
+    "name": "evento",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -40,6 +41,18 @@
     "otorgar_insignias_p_2": {
       "via": "eventos",
       "model": "otorgar-insignias-p2"
+    },
+    "imagen": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }
