@@ -33,7 +33,7 @@
           <ion-card-title style="text-align: center;">{{insignia.nombre}}</ion-card-title>
         </ion-card-header>
         <ion-card-content style="color: black;">
-          Objetivo
+          {{insignia.descripcion}}
         </ion-card-content>
       </ion-card>
     </div>
@@ -42,8 +42,8 @@
           </ion-card-header>
           <ion-card class="blu3 blu4" *ngFor="let evento of historialParticipacion">
             <ion-card-subtitle style="text-align: center; margin-top: 5%;">{{evento.nombre}}</ion-card-subtitle>
-            <ion-card-content class="blu4">
-              <p style="text-align: center;">{{evento.fecha_evento}}</p>
+            <ion-card-content class="blu4 blu3">
+              <p style="text-align: center;" class="blu4">Fecha: {{evento.fecha_evento}}</p>
             </ion-card-content>
           </ion-card>
   </ion-card>

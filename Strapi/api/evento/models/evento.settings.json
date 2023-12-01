@@ -43,16 +43,7 @@
       "model": "otorgar-insignias-p2"
     },
     "imagen": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
+      "type": "string"
     }
   }
 }
